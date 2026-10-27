@@ -1,0 +1,339 @@
+.learning-hub-page {
+  min-height: calc(100vh - 80px);
+  padding: 40px 0 80px 0;
+  background: linear-gradient(180deg, #f8faff 0%, #f1f5f9 100%);
+}
+
+.learning-hub-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Did You Know Card */
+.did-you-know-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.dyk-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dyk-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dyk-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dyk-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dyk-counter {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.dyk-text {
+  font-size: 1.05rem;
+  color: #1e293b;
+  font-weight: 500;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.dyk-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.dyk-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.dyk-dot.active {
+  width: 22px;
+}
+
+/* Controls Bar */
+.learning-controls-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.learning-category-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+}
+
+.category-pill-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.category-pill-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.category-pill-btn.active {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+/* Topics Grid */
+.learning-topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.topic-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.topic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  border-color: #cbd5e1;
+}
+
+.topic-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topic-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topic-category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.topic-level-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.btn-topic-favorite {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-topic-favorite:hover {
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+.btn-topic-favorite.active {
+  background: #fff1f2;
+  border-color: #fda4af;
+}
+
+.topic-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.topic-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+.topic-readtime {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.topic-summary {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.55;
+}
+
+/* Keypoints */
+.topic-keypoints {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.keypoints-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.04em;
+}
+
+.keypoints-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.keypoint-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.keypoint-check {
+  color: #10b981;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Insight Box */
+.topic-insight-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #eff6ff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  color: #1e40af;
+  line-height: 1.45;
+}
+
+.insight-icon {
+  color: #3b82f6;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.topic-card-footer {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.btn-topic-3d {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #f0f9ff;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-topic-3d:hover {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+}
+
+@media (max-width: 640px) {
+  .did-you-know-card {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .learning-topics-grid {
+    grid-template-columns: 1fr;
+  }
+}

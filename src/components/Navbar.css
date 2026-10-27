@@ -1,0 +1,324 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background-color: var(--bg-white);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+  transition: all var(--transition-fast);
+}
+
+.site-header.scrolled {
+  box-shadow: 0 4px 20px -2px rgba(12, 26, 48, 0.07);
+  border-bottom-color: transparent;
+}
+
+/* One centered header container with consistent max-width and horizontal padding */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Brand Logo: Logo and site name together as one unbreakable group */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  user-select: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.brand-heart-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo:hover .brand-heart-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.brand-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.brand-highlight {
+  color: var(--color-cyan);
+}
+
+/* Desktop Navigation: Evenly spaced with responsive gaps and font sizes */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0 clamp(0.5rem, 1.2vw, 1.25rem);
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: clamp(0.45rem, 1vw, 1.25rem);
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.nav-link {
+  font-size: clamp(0.82rem, 0.88vw, 0.92rem);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-blue);
+}
+
+.nav-link.active {
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+/* Active indicator pill: anchored cleanly under active link without baseline shifts */
+.active-pill {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background-color: var(--color-blue);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+}
+
+/* Header Actions: Favorites icon and Explore 3D button vertically centered */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.btn-nav-favorites {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #64748b;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.btn-nav-favorites:hover,
+.btn-nav-favorites.active {
+  background: #fff1f2;
+  border-color: #fecdd3;
+  color: #f43f5e;
+}
+
+.favorites-counter-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #f43f5e;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+.btn-get-started {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 40px;
+  background: var(--gradient-primary-btn);
+  color: var(--color-text-light);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0 1.35rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-btn);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.btn-get-started:hover {
+  background: var(--gradient-primary-hover);
+  box-shadow: var(--shadow-btn-hover);
+  transform: translateY(-1px);
+}
+
+.btn-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.btn-get-started:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.mobile-toggle:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* Mobile Drawer */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 1rem 1.5rem 1.5rem;
+  box-shadow: 0 12px 24px -4px rgba(12, 26, 48, 0.08);
+  animation: slideDown 200ms ease;
+  z-index: 999;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-link {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.mobile-nav-link.active {
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.mobile-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Breakpoints: Tablet & Mobile */
+@media (max-width: 1120px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .header-actions .btn-get-started {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+
+  .brand-text {
+    font-size: 1rem;
+  }
+
+  .brand-heart-icon {
+    width: 28px;
+    height: 28px;
+  }
+}

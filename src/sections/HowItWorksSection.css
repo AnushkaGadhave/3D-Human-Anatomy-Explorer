@@ -1,0 +1,241 @@
+.how-it-works-section {
+  background-color: var(--bg-how-it-works);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hiw-container {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left Stepper */
+.hiw-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hiw-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #4f46e5;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.hiw-heading {
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.15;
+  margin-bottom: 0.9rem;
+}
+
+.hiw-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 2.75rem;
+  max-width: 520px;
+}
+
+/* Horizontal Stepper */
+.stepper-horizontal {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.stepper-unit {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.stepper-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.step-number-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.step-icon-squircle {
+  width: 62px;
+  height: 62px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-fast);
+}
+
+.stepper-node:hover .step-icon-squircle {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.4rem;
+}
+
+.step-desc {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  margin: 0;
+  max-width: 135px;
+}
+
+.step-connector {
+  margin: 0 0.25rem;
+  margin-top: -3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+/* Right Side: Speech Bubble & Heart */
+.hiw-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 280px;
+}
+
+.hiw-speech-bubble {
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.4rem;
+  box-shadow: var(--shadow-card);
+  z-index: 10;
+  max-width: 220px;
+}
+
+.bubble-text {
+  font-family: var(--font-handwriting);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.bubble-tail-svg {
+  position: absolute;
+  bottom: -22px;
+  right: 35px;
+  width: 32px;
+  height: 24px;
+}
+
+.hiw-heart-wrapper {
+  margin-left: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.hiw-heart-img {
+  width: 155px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(12, 26, 48, 0.12));
+  animation: heartPulse 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hiw-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .hiw-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hiw-right {
+    margin-top: 1rem;
+    min-height: 240px;
+  }
+
+  .hiw-speech-bubble {
+    left: 20%;
+  }
+
+  .hiw-heart-wrapper {
+    margin: 0 auto;
+    margin-left: calc(20% + 180px);
+  }
+}
+
+@media (max-width: 720px) {
+  .stepper-horizontal {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .step-connector {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+
+  .step-desc {
+    max-width: 280px;
+  }
+
+  .hiw-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hiw-speech-bubble {
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+
+  .hiw-heart-wrapper {
+    margin: 0 auto;
+  }
+}

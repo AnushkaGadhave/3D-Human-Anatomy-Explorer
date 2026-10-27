@@ -1,0 +1,147 @@
+.organ-card {
+  background-color: #ffffff;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 12px rgba(12, 26, 48, 0.03);
+  position: relative;
+}
+
+.organ-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 28px -6px rgba(12, 26, 48, 0.08);
+}
+
+.organ-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.organ-system-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.btn-favorite {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform var(--transition-fast);
+}
+
+.btn-favorite:hover {
+  transform: scale(1.15);
+}
+
+.organ-card-image-box {
+  width: 100%;
+  height: 140px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.organ-card-img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.08));
+}
+
+.organ-card:hover .organ-card-img {
+  transform: scale(1.08);
+}
+
+.organ-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.organ-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.25rem;
+}
+
+.organ-card-location {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 0.6rem;
+}
+
+.organ-card-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.organ-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-top: auto;
+}
+
+.btn-details {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background-color: #f1f5f9;
+  color: var(--color-navy);
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.btn-details:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-view-3d {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-view-3d:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}

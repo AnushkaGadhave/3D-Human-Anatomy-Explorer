@@ -1,0 +1,118 @@
+/* Design Tokens - 3D Human Anatomy Explorer */
+:root {
+  /* Brand Typography & Surface Colors (Vibrant Educational Theme) */
+  --color-navy: #0c1a30;
+  --color-navy-dark: #071324;
+  --color-text-main: #0c1a30;
+  --color-text-muted: #53647f;
+  --color-text-subtle: #8494ab;
+  --color-text-light: #ffffff;
+
+  /* Vibrant Accent Colors (Landing Page & Education) */
+  --color-blue: #2563eb;
+  --color-blue-dark: #1d4ed8;
+  --color-cyan: #0284c7;
+  --color-cyan-bright: #00b4d8;
+  --color-purple: #8b5cf6;
+  --color-purple-dark: #6d28d9;
+  --color-pink: #ec4899;
+  --color-coral: #f43f5e;
+  --color-teal: #0d9488;
+  --color-orange: #ea580c;
+  --color-mint: #10b981;
+
+  /* 3D Viewer & Technical Display Tokens */
+  --color-primary: #38bdf8;
+  --color-primary-hover: #0284c7;
+  --color-primary-glow: rgba(56, 189, 248, 0.25);
+  --color-secondary: #818cf8;
+  --color-accent: #34d399;
+  --color-danger: #f87171;
+
+  /* Dark Theme Surfaces (for 3D Viewer Canvas & Technical Heads-Up Displays) */
+  --bg-app: #090d16;
+  --bg-surface: #111827;
+  --bg-surface-elevated: #1e293b;
+  --bg-card-dark: rgba(17, 24, 39, 0.85);
+  --bg-card-border-dark: rgba(255, 255, 255, 0.08);
+
+  /* Light Theme Surfaces & Gradients (Landing Page & Content) */
+  --bg-white: #ffffff;
+  --bg-page: #ffffff;
+  --bg-hero: #f4faff;
+  --bg-systems: #edf7fc;
+  --bg-how-it-works: #f6f3ff;
+  --bg-about: #ffffff;
+  --bg-footer: #081426;
+
+  /* Card Pastel Backgrounds */
+  --card-lavender: #f1edfe;
+  --card-mint: #e8f9f3;
+  --card-peach: #fff3e8;
+  --card-pink: #fdf0f5;
+
+  /* Body System Card Colors */
+  --system-circulatory-bg: #fff0f2;
+  --system-circulatory-accent: #f43f5e;
+  --system-respiratory-bg: #e5f4fd;
+  --system-respiratory-accent: #0284c7;
+  --system-digestive-bg: #fff2e2;
+  --system-digestive-accent: #ea580c;
+  --system-nervous-bg: #f4edfc;
+  --system-nervous-accent: #9333ea;
+  --system-skeletal-bg: #e1f8f3;
+  --system-skeletal-accent: #0d9488;
+  --system-muscular-bg: #ffeef0;
+  --system-muscular-accent: #f43f5e;
+
+  /* Stepper Accents */
+  --step-1-bg: #dbeafe;
+  --step-1-color: #2563eb;
+  --step-2-bg: #ede9fe;
+  --step-2-color: #7c3aed;
+  --step-3-bg: #d1fae5;
+  --step-3-color: #059669;
+  --step-4-bg: #ffedd5;
+  --step-4-color: #ea580c;
+
+  /* Gradients */
+  --gradient-primary-btn: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+  --gradient-heading-body: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  --gradient-hero-bg: radial-gradient(circle at 75% 20%, rgba(186, 230, 253, 0.45) 0%, rgba(240, 249, 255, 0.7) 40%, #ffffff 80%);
+  --gradient-badge: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-handwriting: 'Caveat', 'Comic Sans MS', cursive, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 2px 8px rgba(12, 26, 48, 0.04);
+  --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 20px 30px -10px rgba(37, 99, 235, 0.12), 0 10px 15px -5px rgba(15, 23, 42, 0.06);
+  --shadow-btn: 0 4px 14px rgba(79, 70, 229, 0.35);
+  --shadow-btn-hover: 0 6px 20px rgba(79, 70, 229, 0.45);
+  --shadow-floating: 0 12px 28px -4px rgba(12, 26, 48, 0.12), 0 4px 12px rgba(12, 26, 48, 0.06);
+  --shadow-glow: 0 0 25px var(--color-primary-glow);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
