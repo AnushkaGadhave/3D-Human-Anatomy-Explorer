@@ -28,11 +28,9 @@ export default function Footer() {
             <li><Link to="/dashboard" className="footer-nav-link">3D Dashboard</Link></li>
             <li><Link to="/library" className="footer-nav-link">Anatomy Library</Link></li>
             <li><Link to="/organs" className="footer-nav-link">Organ Explorer</Link></li>
-            <li><Link to="/systems" className="footer-nav-link">Body Systems</Link></li>
             <li><Link to="/learn" className="footer-nav-link">Learning Hub</Link></li>
             <li><Link to="/quiz" className="footer-nav-link">Quiz Center</Link></li>
             <li><Link to="/about" className="footer-nav-link">About</Link></li>
-            <li><Link to="/favorites" className="footer-nav-link">Favorites</Link></li>
           </ul>
         </nav>
 

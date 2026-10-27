@@ -43,7 +43,7 @@ const getRouteForCard = (id) => {
     case 'organ-exploration':
       return '/organs'
     case 'body-systems':
-      return '/systems'
+      return '/organs?tab=systems'
     case 'fun-quizzes':
       return '/quiz'
     default:

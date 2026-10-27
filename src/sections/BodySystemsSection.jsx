@@ -10,7 +10,7 @@ export default function BodySystemsSection() {
 
   const handleCardClick = (system) => {
     setActiveSystem(activeSystem?.id === system.id ? null : system)
-    navigate(`/systems`)
+    navigate(`/organs?system=${encodeURIComponent(system.title.replace(' System', ''))}`)
   }
 
   return (
@@ -24,7 +24,7 @@ export default function BodySystemsSection() {
             Discover how different systems work together to keep you alive and healthy.
           </p>
 
-          <Link to="/systems" className="btn-view-all">
+          <Link to="/organs?tab=systems" className="btn-view-all">
             <span>View All Systems</span>
             <ArrowRight size={16} className="btn-arrow" />
           </Link>

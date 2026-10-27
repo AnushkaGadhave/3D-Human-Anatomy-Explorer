@@ -398,13 +398,13 @@ export default function DashboardPage() {
                     <ArrowRight size={14} className="link-arrow" />
                   </Link>
 
-                  <Link to="/systems" className="sidebar-link-row">
+                  <Link to="/organs?tab=systems" className="sidebar-link-row">
                     <div className="link-icon-box bg-purple">
                       <Activity size={15} />
                     </div>
                     <div className="link-text-block">
                       <span className="link-title">Body Systems</span>
-                      <span className="link-sub">Explore all 7 physiological networks</span>
+                      <span className="link-sub">Explore all 7 physiological networks in Organ Explorer</span>
                     </div>
                     <ArrowRight size={14} className="link-arrow" />
                   </Link>

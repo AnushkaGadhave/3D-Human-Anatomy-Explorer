@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Box, Layers, Sparkles } from 'lucide-react'
 import './SystemCard.css'
 
-export default function SystemCard({ system, onExploreDetails }) {
+export default function SystemCard({ system, onExploreDetails, onBrowseOrgans }) {
   return (
     <div className="system-card-expanded" style={{ borderColor: system.borderColor }}>
       {/* Top Banner */}
@@ -62,9 +62,15 @@ export default function SystemCard({ system, onExploreDetails }) {
 
         <div className="system-secondary-links">
           <Link
-            to={`/organs?system=${system.name.replace(' System', '')}`}
+            to={`/organs?system=${encodeURIComponent(system.name.replace(' System', ''))}`}
             className="system-sub-link"
             title="Browse all organs in this system"
+            onClick={(e) => {
+              if (onBrowseOrgans) {
+                e.preventDefault()
+                onBrowseOrgans(system.name.replace(' System', ''))
+              }
+            }}
           >
             <Layers size={13} />
             <span>Organs</span>

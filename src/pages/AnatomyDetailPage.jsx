@@ -110,7 +110,7 @@ export default function AnatomyDetailPage() {
               <span>Launch in 3D Explorer</span>
             </Link>
 
-            <Link to={`/systems`} className="btn-hero-system-link">
+            <Link to={`/organs?system=${encodeURIComponent(part.system)}`} className="btn-hero-system-link">
               <Activity size={16} />
               <span>Explore {part.system} System</span>
             </Link>

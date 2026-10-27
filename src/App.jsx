@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, Navigate, useSearchParams } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
@@ -8,7 +8,6 @@ import DashboardPage from './pages/DashboardPage'
 import AnatomyLibraryPage from './pages/AnatomyLibraryPage'
 import AnatomyDetailPage from './pages/AnatomyDetailPage'
 import OrganExplorerPage from './pages/OrganExplorerPage'
-import BodySystemsPage from './pages/BodySystemsPage'
 import LearningHubPage from './pages/LearningHubPage'
 import QuizCenterPage from './pages/QuizCenterPage'
 import AboutPage from './pages/AboutPage'
@@ -26,6 +25,15 @@ function ScrollToTop() {
   return null
 }
 
+function SystemsRedirect() {
+  const [searchParams] = useSearchParams()
+  const sys = searchParams.get('system')
+  if (sys) {
+    return <Navigate to={`/organs?system=${encodeURIComponent(sys)}`} replace />
+  }
+  return <Navigate to="/organs?tab=systems" replace />
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -40,7 +48,7 @@ export default function App() {
             <Route path="/explore-anatomy" element={<AnatomyLibraryPage />} />
             <Route path="/anatomy/:partId" element={<AnatomyDetailPage />} />
             <Route path="/organs" element={<OrganExplorerPage />} />
-            <Route path="/systems" element={<BodySystemsPage />} />
+            <Route path="/systems" element={<SystemsRedirect />} />
             <Route path="/learn" element={<LearningHubPage />} />
             <Route path="/quiz" element={<QuizCenterPage />} />
             <Route path="/about" element={<AboutPage />} />
